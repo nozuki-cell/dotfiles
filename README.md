@@ -7,7 +7,6 @@
 ![Hyprland](https://img.shields.io/badge/Hyprland-blue?style=flat-square&logo=hyprland)
 ![Arch](https://img.shields.io/badge/Arch%20Linux-1793D1?style=flat-square&logo=archlinux&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 </div>
 
