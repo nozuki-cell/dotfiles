@@ -1,0 +1,103 @@
+# ╔══════════════════════════════════════════╗
+# ║      Minimalistic Starship Prompt       ║
+# ╚══════════════════════════════════════════╝
+
+format = """
+[ ](bg:#89b4fa fg:#11111b)\
+$username\
+[](bg:#cba6f7 fg:#89b4fa)\
+$directory\
+[](bg:#94e2d5 fg:#cba6f7)\
+$git_branch\
+$git_status\
+[](bg:none fg:#94e2d5)\
+$nodejs\
+$rust\
+$python\
+$lua\
+[ ](fg:#94e2d5)\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$rust\
+$python\
+$lua\
+$character"""
+
+# ── Right Prompt ───────────────────────────
+right_format = """\
+[ $time ](fg:#a6adc8 bg:none)"""
+
+# ── Palette ────────────────────────────────
+palette.catppuccin = "catppuccin"
+
+[character]
+success_symbol = "[❯](bold #a6e3a1)"
+error_symbol = "[❯](bold #f38ba8)"
+
+[directory]
+style = "bold bg:#cba6f7 fg:#11111b"
+truncation_length = 3
+truncate_to_repo = true
+read_only = ""
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bold bg:#94e2d5 fg:#11111b"
+format = '[$symbol $branch]($style)'
+
+[git_status]
+style = "bold bg:#94e2d5 fg:#11111b"
+format = '[$all_status$ahead_behind]($style)'
+
+[nodejs]
+symbol = " "
+style = "bold bg:#f9e2af fg:#11111b"
+format = '[$symbol ($version)]($style)'
+
+[rust]
+symbol = "🦀 "
+style = "bold bg:#f5c2e7 fg:#11111b"
+format = '[$symbol ($version)]($style)'
+
+[python]
+symbol = " "
+style = "bold bg:#fab387 fg:#11111b"
+format = '[$symbol ($version)]($style)'
+
+[lua]
+symbol = " "
+style = "bold bg:#89b4fa fg:#11111b"
+format = '[$symbol ($version)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bold fg:#a6adc8"
+format = '[$time]($style)'
+
+[username]
+show_always = false
+style_user = "bold bg:#89b4fa fg:#11111b"
+format = '[$user]($style)'
+
+[os]
+disabled = false
+style = "bold bg:#89b4fa fg:#11111b"
+
+[cmd_duration]
+min_time = 2_000
+style = "bold fg:#a6adc8"
+format = 'took [$duration]($style)'
+
+[package]
+disabled = true

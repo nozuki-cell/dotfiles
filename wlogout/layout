@@ -1,0 +1,52 @@
+{
+    "children": [
+        {
+            "children": [
+                {
+                    "label": "lock",
+                    "action": "swaylock -c 1e1e2e",
+                    "text": "Lock",
+                    "class": "lock"
+                },
+                {
+                    "label": "logout",
+                    "action": "hyprctl dispatch exit",
+                    "text": "Logout",
+                    "class": "logout"
+                }
+            ]
+        },
+        {
+            "children": [
+                {
+                    "label": "suspend",
+                    "action": "systemctl suspend",
+                    "text": "Suspend",
+                    "class": "suspend"
+                },
+                {
+                    "label": "hibernate",
+                    "action": "systemctl hibernate",
+                    "text": "Hibernate",
+                    "class": "hibernate"
+                }
+            ]
+        },
+        {
+            "children": [
+                {
+                    "label": "reboot",
+                    "action": "systemctl reboot",
+                    "text": "Reboot",
+                    "class": "reboot"
+                },
+                {
+                    "label": "shutdown",
+                    "action": "systemctl poweroff",
+                    "text": "Shutdown",
+                    "class": "shutdown"
+                }
+            ]
+        }
+    ]
+}
